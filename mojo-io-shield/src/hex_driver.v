@@ -114,7 +114,7 @@ endmodule // up_down_counter
 
 module binary_decoder #(
     parameter WIDTH = 3,        // choose number of input (address) lines
-    parameter ACTIVE_HIGH = 0   // choose 1-HOT (== 1) or 1-COLD (== 0) encoding
+    parameter ACTIVE_HIGH = 0   // choose one-hot (1) or one-cold (0) encoding
   )(
     input  [WIDTH-1 : 0]      in,
     input                     enable,
