@@ -1,0 +1,15 @@
+# Output products list for <seven_segment_rom>
+seven_segment_rom/blk_mem_gen_v7_3_readme.txt
+seven_segment_rom/doc/blk_mem_gen_v7_3_vinfo.html
+seven_segment_rom/doc/pg058-blk-mem-gen.pdf
+seven_segment_rom.asy
+seven_segment_rom.gise
+seven_segment_rom.mif
+seven_segment_rom.ngc
+seven_segment_rom.v
+seven_segment_rom.veo
+seven_segment_rom.xco
+seven_segment_rom.xise
+seven_segment_rom_flist.txt
+seven_segment_rom_xmdf.tcl
+summary.log

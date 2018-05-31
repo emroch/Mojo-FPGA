@@ -1,0 +1,33 @@
+Welcome to Xilinx CORE Generator.
+Help system initialized.
+The IP Catalog has been reloaded.
+Opening project file
+/mnt/hgfs/Documents-macOS/Programming/Mojo-FPGA/mojo-io-shield/ipcore_dir/corege
+n.cgp.
+Customize and GenerateINFO:sim:172 - Generating IP...
+Applying current project options...
+Finished applying current project options.
+Resolving generics for 'selectio_if_wiz_v4_1'...
+Applying external generics to 'selectio_if_wiz_v4_1'...
+WARNING:coreutil - Failed to generate file: core_v
+       invoked from within
+   "deliverEJava $componentName GenerationOptions $TopLevel"
+       (procedure "components::selectio_if_wiz_v4_1::generate" line 37)
+       invoked from within
+   "components::${componentName}::generate"
+       (procedure "::xilinx::sim::generation::generateCore3rdParty" line 125)
+       invoked from within
+   "::xilinx::sim::generation::generateCore3rdParty
+   $parameters(componentInstanceID)"
+       (procedure "main" line 25)
+       invoked from within
+   "main $argc $argv"
+       invoked from within
+   "return [main $argc $argv]"
+       (file
+   "/opt/Xilinx/14.7/ISE_DS/ISE/coregen/ip/xilinx/network/com/xilinx/ip/selectio
+   _wiz_v4_1/generate/run_legacy_tcl_flow.tcl" line 47)ERROR:sim - Unable to evaluate Tcl file:
+   /opt/Xilinx/14.7/ISE_DS/ISE/coregen/ip/xilinx/network/com/xilinx/ip/selectio_
+   wiz_v4_1/generate/run_legacy_tcl_flow.tcl
+ERROR:sim - Failed executing Tcl generator.
+Closed project file.
