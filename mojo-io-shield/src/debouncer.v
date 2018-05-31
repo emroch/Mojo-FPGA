@@ -8,7 +8,7 @@ module debouncer #(
     output     up     // single clock pulse when button is released
   );
 
-  wire btn_sync;              // synchronized button input
+  reg btn_sync;               // synchronized button input
   reg [LENGTH-1 : 0] count;   // counter to delay through potential glitches
 
   wire idle = (out == btn_sync);  // if synchronized input is the same as
@@ -20,15 +20,18 @@ module debouncer #(
   assign down = ~idle & max_count &  out;
   assign up   = ~idle & max_count & ~out;
 
-  d_ff sync (clk, in, btn_sync);
+  // d_ff sync (clk, in, btn_sync);
+  always @(posedge clk) begin
+    btn_sync <= in;
+  end
 
   always @(posedge clk) begin
     if (idle) begin
-      count <= 0;                 // output matches input, reset the counter
+      count <= 0;               // output matches input, reset the counter
     end else begin
-      count <= count + 1'b1;         // input changed, increment the counter
-      if (max_count)              // if the counter maxed out,
-        out <= ~out;  // consider the button changed
+      count <= count + 1'b1;    // input changed, increment the counter
+      if (max_count)            // if the counter maxed out,
+        out <= ~out;            // consider the button changed
     end
   end
 
