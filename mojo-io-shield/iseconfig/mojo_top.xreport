@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-05-31T01:01:11</DateModified>
+  <DateModified>2018-05-31T12:09:08</DateModified>
   <ModuleName>mojo_top</ModuleName>
-  <SummaryTimeStamp>2018-05-31T00:55:21</SummaryTimeStamp>
+  <SummaryTimeStamp>2018-05-31T12:04:34</SummaryTimeStamp>
   <SavedFilePath>/mnt/hgfs/Documents-macOS/Programming/Mojo-FPGA/mojo-io-shield/iseconfig/mojo_top.xreport</SavedFilePath>
   <ImplementationReportsDirectory>/mnt/hgfs/Documents-macOS/Programming/Mojo-FPGA/mojo-io-shield/syn/</ImplementationReportsDirectory>
   <DateInitialized>2018-05-24T17:25:22</DateInitialized>
