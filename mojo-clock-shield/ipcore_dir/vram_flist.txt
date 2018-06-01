@@ -1,0 +1,14 @@
+# Output products list for <vram>
+summary.log
+vram/blk_mem_gen_v7_3_readme.txt
+vram/doc/blk_mem_gen_v7_3_vinfo.html
+vram/doc/pg058-blk-mem-gen.pdf
+vram.asy
+vram.gise
+vram.ngc
+vram.v
+vram.veo
+vram.xco
+vram.xise
+vram_flist.txt
+vram_xmdf.tcl

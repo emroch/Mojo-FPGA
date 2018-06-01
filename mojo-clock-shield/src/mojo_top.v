@@ -48,6 +48,11 @@ module mojo_top (
   wire [2:0] btn_down;    //   3 bits represent synchronous output <2>,
   wire [2:0] btn_sel;     //   pressed pulse <1>, and released pulse <0>
 
+  wire x_coord, y_coord;
+  wire flip;
+  wire flipped;
+  wire valid;
+  wire [7:0] red, green, blue;
 
   //////////////////////////////////////////////////
   // Output Port Assignments
@@ -63,11 +68,45 @@ module mojo_top (
 
   assign led = 8'b0;                  // on-board LEDs
   assign speaker = 1'b0;              // don't use the speaker
-  
+
 
   //////////////////////////////////////////////////
   // Module Instantiations
   //////////////////////////////////////////////////
+
+  dipslay_controller display (
+    .clk(clk),
+    .rst(rst),
+    .x(x_coord),
+    .y(y_coord),
+    .valid(valid),
+    .red(red),
+    .green(green),
+    .blue(blue),
+    .flip(flip),
+    .flipped(flipped),
+    .d1_c(d1_c),
+    .d1_r(d1_r),
+    .d1_g(d1_g),
+    .d1_b(d1_b),
+    .d2_c(d2_c),
+    .d2_r(d2_r),
+    .d2_g(d2_g),
+    .d2_b(d2_b)
+  );
+
+  graphics_generator graphics (
+    clk(clk),
+    rst(rst),
+    flipped(flipped),
+    x(x_coord),
+    y(y_coord),
+    red(red),
+    green(green),
+    blue(blue),
+    valid(valid),
+    flip(flip)
+  );
 
   debouncer up_dbnc (
     .clk(clk),
